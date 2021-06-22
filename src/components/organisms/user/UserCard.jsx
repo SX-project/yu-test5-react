@@ -1,8 +1,9 @@
 import Styled from "styled-components";
 import { Card } from "../../atoms/card/Card";
 import { UserIconWithName } from "../../molecules/user/UserIconWIthName";
+import { memo } from "react";
 
-export const UserCard = (props) => {
+export const UserCard = memo((props) => {
 
     const { user } = props;
 
@@ -20,8 +21,8 @@ export const UserCard = (props) => {
                 <dd>{user.website}</dd>
             </SDl>
         </Card>
-    )
-}
+    );
+});
 
 const SDl = Styled.dl`
     text-align: left;
